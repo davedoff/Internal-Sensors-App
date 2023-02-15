@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Internal Sensors</string>
+    <string name="text">Text</string>
+    <string name="button">Button</string>
+</resources>
