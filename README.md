@@ -8,6 +8,8 @@ To ensure that the data is easily accessible and reusable, the app saves the mea
 
 The app is built using the Model-View-Controller (MVC) architectural pattern, providing a well-organized structure for the codebase. This approach helps to separate the concerns of the application, making it easier to maintain and modify.
 
+While the implementation of MVC may not be perfect in all aspects of the app, the project has provided me with valuable experience in applying design patterns to real-world development challenges.
+
 <p align="center">
   <img src="Internal_sensors.jpg" alt="Example image" width="360" height="560">
 </p>
