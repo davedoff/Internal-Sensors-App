@@ -1,4 +1,4 @@
-# Internal-Sensors
+# Internal-Sensors-App
 
 As an electrical engineering student, I developed this Android application as part of a course on mobile applications and wireless networks at Kungliga Tekniska Högskolan.
 
