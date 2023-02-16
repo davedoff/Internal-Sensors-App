@@ -16,6 +16,7 @@ import android.util.Log;
 import android.view.View;
 
 import com.davidhalldoff.internalsensors.io.FileIO;
+import com.davidhalldoff.internalsensors.model.Accelerometer;
 import com.davidhalldoff.internalsensors.model.Gyroscope;
 import com.davidhalldoff.internalsensors.model.Sensors;
 import com.davidhalldoff.internalsensors.model.SensorsModel;
@@ -109,12 +110,12 @@ public class MainActivity extends AppCompatActivity {
                 firstAccelTimestamp = event.timestamp;
             }
 
-            Sensors accelerometer = new Sensors();
-
             // EWMA filter
             accelX = F * accelX + (1-F) * event.values[0];
             accelY = F * accelY + (1-F) * event.values[1];
             accelZ = F * accelZ + (1-F) * event.values[2];
+
+            Accelerometer accel = new Accelerometer(accelX, accelY, accelZ);
 
             long timestamp = event.timestamp - firstAccelTimestamp;
 
@@ -129,9 +130,9 @@ public class MainActivity extends AppCompatActivity {
             accelAngle = Math.atan2(accelZ, accelY);
 
             // Save timestamp and angle to object, add object to the list of objects
-            accelerometer.setTimestamp((long) (timestamp * NS2S));
-            accelerometer.setAngle(Math.toDegrees(accelAngle));
-            sensorsModel.addAccel(accelerometer);
+            accel.getSensor().setTimestamp((long) (timestamp * NS2S));
+            accel.getSensor().setAngle(Math.toDegrees(accelAngle));
+            sensorsModel.addAccel(accel.getSensor());
 
             DecimalFormat df = new DecimalFormat();
             df.setMaximumFractionDigits(2);

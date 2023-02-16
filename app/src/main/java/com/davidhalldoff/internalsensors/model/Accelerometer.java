@@ -1,10 +1,10 @@
 package com.davidhalldoff.internalsensors.model;
 
-public class Gyroscope {
+public class Accelerometer {
     private Sensors sensor;
     private double x, y, z;
 
-    public Gyroscope(double x, double y, double z) {
+    public Accelerometer(double x, double y, double z) {
         this.x = x;
         this.y = y;
         this.z = z;
