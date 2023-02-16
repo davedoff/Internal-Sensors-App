@@ -11,5 +11,5 @@ The app is built using the Model-View-Controller (MVC) architectural pattern, pr
 While the implementation of MVC may not be perfect in all aspects of the app, the project has provided me with valuable experience in applying design patterns to real-world development challenges.
 
 <p align="center">
-  <img src="Internal_sensors.jpg" alt="Example image" width="360" height="590">
+  <img src="Internal_sensors.jpg" alt="Example image" width="300" height="600">
 </p>
